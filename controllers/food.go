@@ -19,8 +19,7 @@ func (c *FoodController) List() {
     qs.All(&food_list)
 
     c.Data["Food_List"] = food_list
-    c.Data["Form"] = &forms.FoodForm{Name:"Teste"}
-    c.TplName = "food_list.tpl"
+    c.TplName = "food/_list.tpl"
 }
 
 func (this *FoodController) New() {
